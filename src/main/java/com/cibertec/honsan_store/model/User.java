@@ -31,6 +31,4 @@ public class User {
 
     @Column(name = "dni", length = 10, nullable = false)
     private String dni;
-
-
 }

@@ -15,6 +15,11 @@ public class ListadoController {
 
     private final ListadoService listadoService;
 
+    @GetMapping("/principal")
+    public String PaginaPrincipal() {
+        return "libros/PaginaPrincipal";
+    }
+
     @GetMapping("/listarAutoAyuda")
     public String listarAutoAyuda(Model model) {
         model.addAttribute("listadoAutoAyuda", listadoService.listarAutoAyuda());

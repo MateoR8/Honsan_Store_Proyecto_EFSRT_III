@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cibertec</groupId>
-	<artifactId>Proyecto_Final_LP2_Pixel_Movies</artifactId>
+	<artifactId>Honsan_Store</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Proyecto_Final_LP2_Pixel_Movies</name>
-	<description>Proyecto_Final_LP2_Pixel_Movies</description>
+	<name>Honsan_Store</name>
+	<description>Honsan_Store</description>
 	<url/>
 	<licenses>
 		<license/>
