@@ -74,7 +74,9 @@ nav .nav-item {
 /*-----------------------------------------------------------------------*/
 
 .componenteImg {
-    width: 60%;
+    width: 70%;
+    height: 380px;
+    padding: 10px;
 }
 
 .card {

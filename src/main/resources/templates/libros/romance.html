@@ -66,16 +66,15 @@
     <h3 class="text-center titulo">Libros de Romance</h3>
     <div class="contenedor d-flex justify-content-center align-items-center flex-column">
         <div class="row justify-content-center">
-            <div class="col-md-4" th:each="libro: ${listarRomance}">
+            <div class="col-md-4" th:each="libro, iterStat : ${listarRomance}">
                 <div class="mb-4 shadow-sm">
                     <div class="card">
-                        <img class="componenteImg" src="/images/logo.png" alt="">
+                        <img class="componenteImg" th:src="@{'/images/Romance/rom' + ${iterStat.count} + '.png'}" alt="Imagen del libro">
                         <div class="card-body">
                             <h5 class="card-title" th:text="${libro.getCodigoLibro()}"></h5>
                             <p class="card-text" th:text="${libro.getTituloLibro()}"></p>
                             <p class="card-text" th:text="${libro.getAutorLibro()}"></p>
                             <p class="card-text" th:text="${libro.getPrecioLibro()}"></p>
-
                             <input value="Añadir al Carrito" type="submit" class="btn btn-info">
                         </div>
                     </div>
