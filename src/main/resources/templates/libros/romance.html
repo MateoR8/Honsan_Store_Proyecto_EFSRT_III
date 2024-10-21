@@ -13,11 +13,11 @@
         <img class="imgLogo" src="/images/logo.png" alt="Pagina Principal">
     </a>
     <input class="form-control" type="text" placeholder="🔎Que estas buscando?" disabled>
-    <a th:href="@{Login.html}" class="nav-item">
+    <a th:href="@{/libros/usuario}">
         <img src="/images/user.png" alt="">
         <p>Mi Perfil</p>
     </a>
-    <a th:href="@{Carrito.html}" class="nav-item">
+    <a th:href="@{/libros/listadoCarrito}"  class="nav-item">
         <img src="/images/carrito.png" alt="">
         <p>Mi Carrito</p>
     </a>
@@ -75,7 +75,7 @@
                             <p class="card-text" th:text="${libro.getTituloLibro()}"></p>
                             <p class="card-text" th:text="${libro.getAutorLibro()}"></p>
                             <p class="card-text" th:text="${libro.getPrecioLibro()}"></p>
-                            <input value="Añadir al Carrito" type="submit" class="btn btn-info">
+                            <a class="btn btn-info" th:href="@{/libros/agregarCarrito(codigo=${libro.codigoLibro}, titulo=${libro.tituloLibro}, precio=${libro.precioLibro})}">Seleccionar</a>
                         </div>
                     </div>
                 </div>
