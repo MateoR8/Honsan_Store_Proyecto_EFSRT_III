@@ -64,7 +64,7 @@
     <div class="container">
         <strong><p class="titulo">Libros de Interes</p></strong>
     </div>
-    <br >
+    <br>
     <div class="mensaje">
             <p>Tienes <span th:text="${#lists.size(carritoCompra)}">0</span> productos en tu carrito</p>
     </div>
@@ -73,7 +73,7 @@
         <div class="cuadro1">
             <div  th:each="carrito : ${carritoCompra}">
                 <div class="producto">
-                    <img src="https://via.placeholder.com/100" alt="Producto">
+                    <img src="/images/libroCarrito.webp" alt="Producto">
                     <div class="cuadro1-Info">
                         <p th:text="${carrito.tituloLibro}">Nombre del Producto</p>
                     </div>
@@ -91,7 +91,9 @@
             <p>S/ <span th:text="${totalPrecio}"></span></p>
             <h3>Total</h3>
             <p class="total">S/ <span th:text="${totalPrecio}"></span></p>
-            <a th:href="@{/libros/reporteEmpleados}" class="btn-Factura" target="_blank">Generar PDF</a>
+            <a th:href="@{/libros/reporteEmpleados}" target="_blank">
+                <button class="btn-Factura" th:disabled="${#lists.isEmpty(carritoCompra)}">Generar PDF</button>
+            </a>
         </div>
     </div>
 
