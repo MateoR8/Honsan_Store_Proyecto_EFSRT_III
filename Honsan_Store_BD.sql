@@ -1,6 +1,6 @@
-Drop database if exists Honsan_Store_EFSRT3;
-create database Honsan_Store_EFSRT3;
-use Honsan_Store_EFSRT3;
+Drop database if exists Honsan_Store_BD;
+create database Honsan_Store_BD;
+use Honsan_Store_BD;
 
 -- Luego de ejecutar el proyecto realizar estos inserts
 
